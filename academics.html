@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Author of Life Institute of Theology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="academics-style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AUTHOR OF LIFE</span>
+                    <span class="logo-subtitle">INSTITUTE OF THEOLOGY</span>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#" class="nav-link active">Academics</a>
+                <a href="#" class="nav-link">Admissions</a>
+                <a href="#" class="nav-link">Student Portal</a>
+                <a href="#" class="nav-link">Sermons</a>
+                <a href="#" class="nav-link">Events</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Contact</a>
+                <a href="#" class="btn btn-primary btn-nav">Apply Now</a>
+            </nav>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1 class="banner-title">Academics</h1>
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a> <span>/</span> Academics
+            </div>
+        </div>
+    </section>
+
+    <section class="program-intro">
+        <div class="container intro-grid">
+            <div class="intro-content">
+                <h2 class="section-heading">Our Programs</h2>
+                <p class="intro-text">
+                    We offer a wide range of accredited programs designed to equip you for ministry and impact.
+                </p>
+                <a href="#" class="btn btn-primary">View All Programs</a>
+            </div>
+            <div class="intro-image-container">
+                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=800" alt="Graduation cap and open holy book" class="intro-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-section">
+        <div class="container programs-grid">
+            
+            <div class="program-card">
+                <div class="program-icon"><i class="fa-solid fa-certificate"></i></div>
+                <h3 class="program-title">Certificate Programs</h3>
+                <p class="program-desc">
+                    Short-term programs designed for personal and ministerial growth.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon"><i class="fa-solid fa-award"></i></div>
+                <h3 class="program-title">Diploma Programs</h3>
+                <p class="program-desc">
+                    Mid-level programs for students seeking deeper knowledge.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                <h3 class="program-title">Bachelor's Programs</h3>
+                <p class="program-desc">
+                    Undergraduate degrees in various theological disciplines.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon"><i class="fa-solid fa-scroll"></i></div>
+                <h3 class="program-title">Master's Programs</h3>
+                <p class="program-desc">
+                    Graduate programs for advanced study in theology and ministry.
+                </p>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon"><i class="fa-solid fa-scroll"></i></div>
+                <h3 class="program-title">Doctorate Programs</h3>
+                <p class="program-desc">
+                    Advanced programs for ministry and academic excellence.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.querySelector('.navbar');
+
+        mobileMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
