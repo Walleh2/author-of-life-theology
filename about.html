@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Author of Life Institute of Theology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="about-style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AUTHOR OF LIFE</span>
+                    <span class="logo-subtitle">INSTITUTE OF THEOLOGY</span>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link active">About</a>
+                <a href="#" class="nav-link">Academics</a>
+                <a href="#" class="nav-link">Admissions</a>
+                <a href="#" class="nav-link">Student Portal</a>
+                <a href="#" class="nav-link">Sermons</a>
+                <a href="#" class="nav-link">Events</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Contact</a>
+                <a href="#" class="btn btn-primary btn-nav">Apply Now</a>
+            </nav>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1 class="banner-title">About Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a> <span>/</span> About Us
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="container history-grid">
+            <div class="history-content">
+                <h2 class="section-heading">Our History</h2>
+                <p>
+                    Author of Life Institute of Theology was founded with a divine mandate to equip leaders for the body of Christ and the world at large. Over the years, we have remained committed to academic excellence and spiritual formation.
+                </p>
+            </div>
+            <div class="history-image-container"> 
+  <img src="https://img.freepik.com/free-photo/friends-people-group-teamwork-diversity_53876-31488.jpg?w=740&q=80" alt="Three diverse students studying and smiling together" class="history-image"> 
+</div>
+        </div>
+    </section>
+
+    <section class="pillars-section">
+        <div class="container pillars-grid">
+            
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-hands-praying"></i></div>
+                <h3 class="pillar-title">Our Mission</h3>
+                <p class="pillar-text">
+                    To provide Theological education rooted in God's word, equipping God's people for the work of Ministry in the World.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-eye"></i></div>
+                <h3 class="pillar-title">Our Vision</h3>
+                <p class="pillar-text">
+                    To raise faithful stewards for Christ to transform the world.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="pillar-title">Our Core Values</h3>
+                <ul class="values-list">
+                    <li>Integrity</li>
+                    <li>Excellence</li>
+                    <li>Servant Leadership</li>
+                    <li>Faith</li>
+                    <li>Love</li>
+                </ul>
+            </div>
+
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fa-solid fa-book-bible"></i></div>
+                <h3 class="pillar-title">Our Belief</h3>
+                <p class="pillar-text">
+                    We believe the Bible is the inspired Word of God and the final authority in all matters of faith and life.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.querySelector('.navbar');
+
+        mobileMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

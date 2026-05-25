@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author of Life Institute of Theology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">AUTHOR OF LIFE</span>
+                    <span class="logo-subtitle">INSTITUTE OF THEOLOGY</span>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Academics</a>
+                <a href="#" class="nav-link">Admissions</a>
+                <a href="#" class="nav-link">Student Portal</a>
+                <a href="#" class="nav-link">Events</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="#" class="nav-link">Contact</a>
+                <a href="#" class="btn btn-primary btn-nav">Apply Now</a>
+            </nav>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Raising Leaders,<br>Transforming Lives,<br>Impacting Nations.</h1>
+                <p class="hero-description">Equipping men and women for excellence in ministry and service through sound biblical truth.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary">Apply Now</a>
+                    <a href="#" class="btn btn-secondary">Explore Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-card">
+                <div class="impact-header-badge">Our Impacts</div>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="impact-info">
+                            <span class="counter">5,000+</span>
+                            <span class="counter-label">Students</span>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div class="impact-info">
+                            <span class="counter">200+</span>
+                            <span class="counter-label">Courses</span>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="impact-info">
+                            <span class="counter">50+</span>
+                            <span class="counter-label">Lecturers</span>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="impact-info">
+                            <span class="counter">15+</span>
+                            <span class="counter-label">Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="welcome-section">
+        <div class="container text-center">
+            <h2 class="welcome-title">Welcome to Author of Life Institute of Theology</h2>
+            <p class="welcome-text">
+                A premier institution committed to raising servant-leaders who will stand for truth, impact their world, and fulfill their God-given purpose.
+            </p>
+            
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>No. 110, Glory Street,<br>Felele New Layout Extension, Lokoja,</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple script for responsive mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.querySelector('.navbar');
+
+        mobileMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
