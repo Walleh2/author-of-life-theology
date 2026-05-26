@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons & Media - Author of Life Institute of Theology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="sermons-style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-identity">
+                <div class="brand-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="brand-titles">
+                    <h2>AUTHOR OF LIFE</h2>
+                    <span>INSTITUTE OF THEOLOGY</span>
+                </div>
+            </div>
+            <nav class="main-navigation" id="main-nav">
+                <a href="index.html" class="nav-item-link">Home</a>
+                <a href="about.html" class="nav-item-link">About</a>
+                <a href="academics.html" class="nav-item-link">Academics</a>
+                <a href="admissions.html" class="nav-item-link">Admissions</a>
+                <a href="student-login.html" class="nav-item-link">Portal</a>
+                <a href="sermons.html" class="nav-item-link active">Sermons</a>
+                <a href="#" class="nav-item-link">Events</a>
+                <a href="#" class="nav-item-link">Blog</a>
+                <a href="#" class="nav-item-link">Contact</a>
+                <a href="admissions.html" class="btn-cta-nav">Apply Now</a>
+            </nav>
+            <button class="menu-responsive-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="breadcrumbs-banner">
+        <div class="banner-container">
+            <h1 class="page-main-heading">Sermons & Media</h1>
+            <div class="navigation-breadcrumbs">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a> <span>/</span> Sermons & Media
+            </div>
+        </div>
+    </section>
+
+    <div class="filter-wrapper-container">
+        <div class="filter-tabs-row">
+            <button class="filter-btn active" onclick="filterMedia('all')">All Media</button>
+            <button class="filter-btn" onclick="filterMedia('official')">Official Sermons</button>
+            <button class="filter-btn" onclick="filterMedia('community')">Community Uploads</button>
+            <button class="filter-btn" onclick="filterMedia('books')">Books & Literature</button>
+            <button class="filter-btn" onclick="filterMedia('external')">Free Resources</button>
+        </div>
+    </div>
+
+    <main class="media-library-stage">
+        <div class="media-cards-grid" id="media-grid">
+            
+            <div class="media-card-item" data-category="official">
+                <div class="thumbnail-aspect-box">
+                    <img src="https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&q=80&w=600" alt="Sermon Cover">
+                    <span class="badge-category tag-gold">Official</span>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="play-overlay-btn"><i class="fa-solid fa-circle-play"></i></a>
+                </div>
+                <div class="media-card-body">
+                    <h3 class="media-card-title">Walking in Divine Purpose</h3>
+                    <p class="media-card-author">Pastor Michael Adeoye</p>
+                    <span class="media-card-date"><i class="fa-regular fa-calendar"></i> May 12, 2026</span>
+                </div>
+            </div>
+
+            <div class="media-card-item" data-category="official">
+                <div class="thumbnail-aspect-box">
+                    <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=600" alt="Sermon Cover">
+                    <span class="badge-category tag-gold">Official</span>
+                    <a href="#" class="play-overlay-btn"><i class="fa-solid fa-circle-play"></i></a>
+                </div>
+                <div class="media-card-body">
+                    <h3 class="media-card-title">The Power of Prayer</h3>
+                    <p class="media-card-author">Pastor Michael Adeoye</p>
+                    <span class="media-card-date"><i class="fa-regular fa-calendar"></i> May 5, 2026</span>
+                </div>
+            </div>
+
+            <div class="media-card-item" data-category="community">
+                <div class="thumbnail-aspect-box">
+                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=600" alt="User Presentation">
+                    <span class="badge-category tag-blue">Community</span>
+                    <a href="#" class="play-overlay-btn"><i class="fa-solid fa-circle-microphone"></i></a>
+                </div>
+                <div class="media-card-body">
+                    <h3 class="media-card-title">Grace and Sanctification</h3>
+                    <p class="media-card-author">Evang. John Daniel</p>
+                    <span class="media-card-date"><i class="fa-regular fa-calendar"></i> May 20, 2026</span>
+                </div>
+            </div>
+
+            <div class="media-card-item" data-category="books">
+                <div class="thumbnail-aspect-box">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=600" alt="Book Cover">
+                    <span class="badge-category tag-green">E-Book</span>
+                    <a href="#" class="play-overlay-btn"><i class="fa-solid fa-file-pdf"></i></a>
+                </div>
+                <div class="media-card-body">
+                    <h3 class="media-card-title">Foundational Systematic Theology</h3>
+                    <p class="media-card-author">Dr. Sarah Jenkins</p>
+                    <span class="media-card-date"><i class="fa-solid fa-download"></i> PDF Download</span>
+                </div>
+            </div>
+
+            <div class="media-card-item" data-category="external">
+                <div class="thumbnail-aspect-box">
+                    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&q=80&w=600" alt="External Resource">
+                    <span class="badge-category tag-gray">External Feed</span>
+                    <a href="https://www.desiringgod.org/messages" target="_blank" class="play-overlay-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="media-card-body">
+                    <h3 class="media-card-title">Desiring God Audio Library</h3>
+                    <p class="media-card-author">External Stream Site</p>
+                    <span class="media-card-date"><i class="fa-solid fa-link"></i> Open Resource</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="portal-cta-split-section">
+        <div class="cta-split-container">
+            
+            <div class="cta-action-card dark-panel">
+                <div class="cta-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <h3>Share Your Content</h3>
+                <p>Sign up for an account to upload your video lectures, sermon outlines, podcasts, and theological ebooks directly to our community directory.</p>
+                <div class="btn-group-row">
+                    <a href="#" class="btn-action gold-fill">Create Contributor Account</a>
+                    <a href="#" class="btn-action border-only">Upload Guidelines</a>
+                </div>
+            </div>
+
+            <div class="cta-action-card light-panel">
+                <div class="cta-icon dark-text"><i class="fa-solid fa-book-bookmark"></i></div>
+                <h3>Free Sermon Partners</h3>
+                <p>Instantly browse open-source external text libraries, commentary directories, and message indices provided by our educational partners.</p>
+                <ul class="partner-links-list">
+                    <li><a href="https://www.monergism.com" target="_blank"><i class="fa-solid fa-arrow-right"></i> Monergism Theological Library</a></li>
+                    <li><a href="https://www.biblegateway.com" target="_blank"><i class="fa-solid fa-arrow-right"></i> BibleGateway Audio Resources</a></li>
+                    <li><a href="https://archive.org" target="_blank"><i class="fa-solid fa-arrow-right"></i> Internet Archive Open Books</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // Responsive Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('responsive-active');
+        });
+
+        // Interactive Categories Filter
+        function filterMedia(category) {
+            // Manage Active Button Styling Classes
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Manage Grid Items Display Layout Logic
+            const cards = document.querySelectorAll('.media-card-item');
+            cards.forEach(card => {
+                if(category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

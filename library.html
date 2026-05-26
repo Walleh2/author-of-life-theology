@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library - Author of Life Institute of Theology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="library-style.css">
+</head>
+<body>
+
+    <header class="main-site-header">
+        <div class="nav-constrainer">
+            <div class="header-logo-block">
+                <div class="icon-shield"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="text-branding">
+                    <h2>AUTHOR OF LIFE</h2>
+                    <span>INSTITUTE OF THEOLOGY</span>
+                </div>
+            </div>
+            
+            <nav class="navigation-link-drawer" id="mobileNavDrawer">
+                <a href="index.html" class="drawer-link">Home</a>
+                <a href="about.html" class="drawer-link">About</a>
+                <a href="academics.html" class="drawer-link">Academics</a>
+                <a href="admissions.html" class="drawer-link">Admissions</a>
+                <a href="student-login.html" class="drawer-link">Portal</a>
+                <a href="sermons.html" class="drawer-link">Sermons</a>
+                <a href="library.html" class="drawer-link active">E-Library</a>
+                <a href="#" class="drawer-link">Contact</a>
+                <a href="admissions.html" class="nav-button-action">Apply Now</a>
+            </nav>
+
+            <button class="hamburger-menu-trigger" id="drawerTrigger" aria-label="Open Menu Layout">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="library-hero-banner">
+        <div class="hero-constrainer">
+            <h1 class="hero-main-title">E-Library</h1>
+            <div class="breadcrumb-trail">
+                <a href="index.html">Home</a> <span>/</span> E-Library
+            </div>
+        </div>
+    </section>
+
+    <section class="library-controls-section">
+        <div class="controls-container">
+            <div class="search-input-group">
+                <input type="text" placeholder="Search books, journals, articles..." aria-label="Search field">
+                <button class="btn-search-execute" type="button">Search</button>
+            </div>
+            <div class="dropdown-filter-group">
+                <select class="category-select-dropdown" aria-label="Filter Categories">
+                    <option value="all">All Categories</option>
+                    <option value="books">Books</option>
+                    <option value="journals">Journals</option>
+                    <option value="theses">Theses</option>
+                    <option value="studies">Bible Studies</option>
+                    <option value="papers">Research Papers</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <main class="vault-resource-stage">
+        <div class="stage-container">
+            <h2 class="section-context-heading">Featured Resources</h2>
+            
+            <div class="books-display-grid">
+                
+                <div class="book-card-node" data-type="books">
+                    <div class="book-cover-wrapper bg-dark-slate">
+                        <div class="cover-design-inner">
+                            <span class="cover-tag">Theology</span>
+                            <h4>Systematic Theology</h4>
+                            <p class="cover-author-sub">Wayne Grudem</p>
+                        </div>
+                    </div>
+                    <div class="book-meta-footer">
+                        <h3>Systematic Theology</h3>
+                        <p class="author-label">Wayne Grudem</p>
+                        <a href="https://archive.org/details/SystematicTheologyWayneGrudem" target="_blank" class="resource-access-link"><i class="fa-solid fa-file-pdf"></i> Read Free Edition</a>
+                    </div>
+                </div>
+
+                <div class="book-card-node" data-type="books">
+                    <div class="book-cover-wrapper bg-emerald">
+                        <div class="cover-design-inner">
+                            <span class="cover-tag">Scripture</span>
+                            <h4>Life Application</h4>
+                            <p class="cover-author-sub">Study Bible</p>
+                        </div>
+                    </div>
+                    <div class="book-meta-footer">
+                        <h3>Life Application</h3>
+                        <p class="author-label">Study Bible</p>
+                        <a href="https://www.biblegateway.com/" target="_blank" class="resource-access-link"><i class="fa-solid fa-globe"></i> Access Resource</a>
+                    </div>
+                </div>
+
+                <div class="book-card-node" data-type="books">
+                    <div class="book-cover-wrapper bg-umber">
+                        <div class="cover-design-inner">
+                            <span class="cover-tag">Leadership</span>
+                            <h4>The Spirit of Leadership</h4>
+                            <p class="cover-author-sub">Thomas Nelson</p>
+                        </div>
+                    </div>
+                    <div class="book-meta-footer">
+                        <h3>The Spirit of Leadership</h3>
+                        <p class="author-label">Thomas Nelson</p>
+                        <a href="#" class="resource-access-link"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="book-card-node" data-type="journals">
+                    <div class="book-cover-wrapper bg-burgundy">
+                        <div class="cover-design-inner">
+                            <span class="cover-tag">Doctrine</span>
+                            <h4>Pentecostal Doctrine</h4>
+                            <p class="cover-author-sub">Myer Pearlman</p>
+                        </div>
+                    </div>
+                    <div class="book-meta-footer">
+                        <h3>Pentecostal Doctrine</h3>
+                        <p class="author-label">Myer Pearlman</p>
+                        <a href="#" class="resource-access-link"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="book-card-node" data-type="papers">
+                    <div class="book-cover-wrapper bg-parchment">
+                        <div class="cover-design-inner dark-text">
+                            <span class="cover-tag">Exegesis</span>
+                            <h4>The Theology of Paul</h4>
+                            <p class="cover-author-sub">John MacArthur</p>
+                        </div>
+                    </div>
+                    <div class="book-meta-footer">
+                        <h3>The Theology of Paul</h3>
+                        <p class="author-label">John MacArthur</p>
+                        <a href="#" class="resource-access-link"><i class="fa-solid fa-file-pdf"></i> View Research</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="category-ribbon-section">
+        <div class="ribbon-container">
+            <h2 class="sub-section-title">Categories</h2>
+            <div class="ribbon-flex-row">
+                <button class="ribbon-capsule" onclick="sortLibrary('books')"><i class="fa-solid fa-book"></i> Books</button>
+                <button class="ribbon-capsule" onclick="sortLibrary('journals')"><i class="fa-solid fa-scroll"></i> Journals</button>
+                <button class="ribbon-capsule" onclick="sortLibrary('theses')"><i class="fa-solid fa-graduation-cap"></i> Theses</button>
+                <button class="ribbon-capsule" onclick="sortLibrary('studies')"><i class="fa-solid fa-book-open-reader"></i> Bible Studies</button>
+                <button class="ribbon-capsule" onclick="sortLibrary('papers')"><i class="fa-solid fa-newspaper"></i> Research Papers</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Responsive Navigation Drawer Controller
+        const drawerTrigger = document.getElementById('drawerTrigger');
+        const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+
+        drawerTrigger.addEventListener('click', () => {
+            mobileNavDrawer.classList.toggle('drawer-open');
+        });
+
+        // Quick Category Sorting Logic
+        function sortLibrary(typeKey) {
+            const bookCards = document.querySelectorAll('.book-card-node');
+            bookCards.forEach(card => {
+                if (card.getAttribute('data-type') === typeKey) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+/* --- Institutional CSS Standard Definitions --- */
+:root {
+    --navy-blue: #041e3d;
+    --navy-deep: #021326;
+    --gold-accent: #c28e34;
+    --cream-light: #fcfaf6;
+    --white: #ffffff;
+    --charcoal: #2c3e50;
+    --slate-gray: #64748b;
+    --border-light: #eaedf1;
+    --serif-headers: 'Cinzel', serif;
+    --sans-body: 'Inter', sans-serif;
+    --smooth-transition: all 0.2s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--sans-body);
+    background-color: var(--cream-light);
+    color: var(--charcoal);
+    line-height: 1.5;
+}
+
+/* --- Responsive Navigation Header System --- */
+.main-site-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+}
+
+.nav-constrainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-shield {
+    font-size: 26px;
+    color: var(--navy-blue);
+}
+
+.text-branding h2 {
+    font-family: var(--serif-headers);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.text-branding span {
+    font-size: 10px;
+    color: var(--slate-gray);
+    letter-spacing: 1px;
+    display: block;
+}
+
+.navigation-link-drawer {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.drawer-link {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--smooth-transition);
+}
+
+.drawer-link:hover, .drawer-link.active {
+    color: var(--gold-accent);
+}
+
+.nav-button-action {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--gold-accent);
+    color: var(--white);
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--smooth-transition);
+}
+
+.nav-button-action:hover {
+    background-color: #a67628;
+}
+
+.hamburger-menu-trigger {
+    display: none;
+    font-size: 24px;
+    color: var(--navy-blue);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Page Context Banner Area --- */
+.library-hero-banner {
+    background-color: #f5eff0;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.hero-constrainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero-main-title {
+    font-family: var(--serif-headers);
+    font-size: 32px;
+    color: var(--navy-blue);
+    margin-bottom: 4px;
+}
+
+.breadcrumb-trail {
+    font-size: 13px;
+    color: var(--slate-gray);
+}
+
+.breadcrumb-trail a {
+    color: var(--charcoal);
+    text-decoration: none;
+}
+
+.breadcrumb-trail span {
+    margin: 0 6px;
+    color: #cbd5e1;
+}
+
+/* --- Control Search/Filter Panel Styling --- */
+.library-controls-section {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 24px;
+}
+
+.controls-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.search-input-group {
+    flex: 1;
+    min-width: 290px;
+    display: flex;
+}
+
+.search-input-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dcdde1;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    color: var(--charcoal);
+}
+
+.search-input-group input:focus {
+    outline: 1px solid var(--navy-blue);
+}
+
+.btn-search-execute {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    border: none;
+    padding: 0 26px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: var(--smooth-transition);
+}
+
+.btn-search-execute:hover {
+    background-color: var(--navy-deep);
+}
+
+.dropdown-filter-group {
+    min-width: 220px;
+}
+
+.category-select-dropdown {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: var(--white);
+    color: var(--charcoal);
+}
+
+/* --- Resource Presentation Display Grid --- */
+.vault-resource-stage {
+    max-width: 1200px;
+    margin: 40px auto 60px auto;
+    padding: 0 24px;
+}
+
+.section-context-heading {
+    font-family: var(--serif-headers);
+    font-size: 20px;
+    color: var(--navy-blue);
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 8px;
+}
+
+.books-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.book-card-node {
+    background-color: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: var(--smooth-transition);
+}
+
+.book-card-node:hover {
+    transform: translateY(-4px);
+}
+
+/* Hardbound Digital Book Covers Representation */
+.book-cover-wrapper {
+    aspect-ratio: 3 / 4;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.cover-design-inner {
+    color: var(--white);
+}
+
+.dark-text {
+    color: #333333 !important;
+}
+
+.cover-tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+.cover-design-inner h4 {
+    font-family: var(--serif-headers);
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.cover-author-sub {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* Hardbound Palettes */
+.bg-dark-slate { background: linear-gradient(135deg, #1e293b, #0f172a); }
+.bg-emerald    { background: linear-gradient(135deg, #115e59, #134e4a); }
+.bg-umber      { background: linear-gradient(135deg, #7c2d12, #431407); }
+.bg-burgundy   { background: linear-gradient(135deg, #4c0519, #881337); }
+.bg-parchment  { background: linear-gradient(135deg, #fef08a, #fef9c3); border: 1px solid #e2e8f0;}
+
+.book-meta-footer {
+    padding: 14px 4px;
+}
+
+.book-meta-footer h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.author-label {
+    font-size: 12px;
+    color: var(--slate-gray);
+    margin-bottom: 10px;
+}
+
+.resource-access-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--navy-blue);
+    background-color: #f1f5f9;
+    padding: 8px;
+    border-radius: 4px;
+    transition: var(--smooth-transition);
+}
+
+.resource-access-link:hover {
+    background-color: var(--gold-accent);
+    color: var(--white);
+}
+
+/* --- Bottom Category Selection Ribbon --- */
+.category-ribbon-section {
+    max-width: 1200px;
+    margin: 20px auto 80px auto;
+    padding: 0 24px;
+}
+
+.sub-section-title {
+    font-family: var(--serif-headers);
+    font-size: 18px;
+    color: var(--navy-blue);
+    margin-bottom: 16px;
+}
+
+.ribbon-flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ribbon-capsule {
+    background-color: var(--white);
+    border: 1px solid var(--border-light);
+    color: var(--charcoal);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: var(--smooth-transition);
+}
+
+.ribbon-capsule:hover {
+    border-color: var(--gold-accent);
+    color: var(--gold-accent);
+    background-color: #fdfbf7;
+}
+
+/* --- Media Queries / Mobile Responsiveness Framework --- */
+@media (max-width: 868px) {
+    .hamburger-menu-trigger {
+        display: block; /* Reveals toggle icon button */
+    }
+
+    .navigation-link-drawer {
+        display: none; /* Collapses menu into a drawer overlay */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 24px;
+        gap: 18px;
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    .navigation-link-drawer.drawer-open {
+        display: flex; /* Opens modern mobile drawer overlay interactively */
+    }
+
+    .nav-button-action {
+        width: 100%;
+        text-align: center;
+    }
+
+    .controls-container {
+        flex-direction: column;
+    }
+    
+    .dropdown-filter-group {
+        width: 100%;
+    }
+}

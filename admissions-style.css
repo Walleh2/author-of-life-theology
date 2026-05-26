@@ -1,0 +1,334 @@
+/* --- Root Variables & Reset --- */
+:root {
+    --primary-color: #c28e34; /* Gold accent tone */
+    --primary-hover: #a67628;
+    --dark-navy: #041e3d;
+    --text-dark: #222222;
+    --text-muted: #555555;
+    --bg-light: #fdfbf7; /* Consistent light cream background */
+    --white: #ffffff;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: var(--dark-navy);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-navy);
+    letter-spacing: 0.5px;
+}
+
+.logo-subtitle {
+    font-size: 11px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    padding: 8px 18px;
+    font-size: 13px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--dark-navy);
+    cursor: pointer;
+}
+
+/* --- Page Banner (Breadcrumbs) --- */
+.page-banner {
+    background-color: #f6f1e7;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.banner-title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    color: var(--dark-navy);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb span {
+    margin: 0 6px;
+    color: #aaa;
+}
+
+/* --- Admission Hero Section --- */
+.admission-hero {
+    padding: 60px 0 80px 0;
+}
+
+.admission-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    color: var(--dark-navy);
+    margin-bottom: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 520px;
+    line-height: 1.7;
+}
+
+.hero-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+/* --- Split Requirements/Process Section --- */
+.info-split-section {
+    padding-bottom: 100px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.column-title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    color: var(--dark-navy);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Left Column: Requirements List Layout */
+.requirements-list {
+    list-style: none;
+}
+
+.requirements-list li {
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.requirements-list li i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* Right Column: Process Numbered Layout */
+.process-list {
+    list-style: none;
+}
+
+.process-list li {
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.step-number {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.step-text {
+    line-height: 1.5;
+}
+
+/* --- Responsive Media Queries --- */
+
+@media (max-width: 992px) {
+    .admission-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .btn-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 28px;
+    }
+    
+    .column-title {
+        font-size: 22px;
+    }
+}

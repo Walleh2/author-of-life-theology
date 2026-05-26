@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Graceword Theological College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Section Subheading Filter Bar */
+        .section-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--navy-primary);
+        }
+
+        .view-all-select {
+            padding: 10px 16px;
+            border: 1px solid var(--border-color);
+            background-color: var(--surface-white);
+            color: var(--text-main);
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Core Event Card Layout Grid */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .sample-event-card {
+            background-color: var(--surface-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 30px 24px;
+            position: relative;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Top Corner Floating Dark Navy Box Date Display */
+        .card-date-anchor {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .navy-date-box {
+            background-color: var(--navy-primary);
+            color: var(--surface-white);
+            width: 56px;
+            height: 56px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: var(--font-sans);
+            box-shadow: 0 4px 10px rgba(4, 30, 61, 0.15);
+            flex-shrink: 0;
+        }
+
+        .navy-date-box .day-num {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .navy-date-box .month-lbl {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+
+        .card-header-titles h3 {
+            font-size: 18px;
+            color: var(--navy-primary);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        /* Gold icon detail fields matching layout requirements */
+        .card-meta-details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .meta-detail-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .meta-detail-row i {
+            color: var(--gold-accent);
+            font-size: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Clean wide gold cta buttons */
+        .btn-card-register {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--gold-accent);
+            color: var(--surface-white);
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: auto;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-card-register:hover {
+            background-color: var(--gold-hover);
+        }
+
+        /* --- Lower Dashboard Calendar Interface --- */
+        .calendar-section-container {
+            background-color: var(--surface-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .calendar-dashboard-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--navy-primary);
+            margin-bottom: 24px;
+        }
+
+        /* Aspect-ratio shell prevents iframe stretching across mobile views */
+        .responsive-calendar-frame-shell {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 60%; /* Desktop view aspect standard */
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .responsive-calendar-frame-shell iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: 0;
+        }
+
+        /* Switch calendar aspect ratio on smaller screens to ensure visibility */
+        @media (max-width: 768px) {
+            .responsive-calendar-frame-shell {
+                padding-bottom: 110%; /* Taller list display perfect for mobile interactions */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-identity">
+                <div class="brand-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="brand-titles">
+                    <h2>GRACEWORD</h2>
+                    <span>THEOLOGICAL COLLEGE</span>
+                </div>
+            </div>
+            <nav class="main-navigation" id="navbar">
+                <a href="academics.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="academics.html" class="nav-link">Academics</a>
+                <a href="sermons.html" class="nav-link">Sermons</a>
+                <a href="events.html" class="nav-link active">Events</a>
+                <a href="news.html" class="nav-link">Blog</a>
+                <a href="#" class="btn-nav-cta">Apply Now</a>
+            </nav>
+            <button class="menu-toggle-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-container">
+            <h1 class="banner-title">Events</h1>
+            <div class="breadcrumb-trail">
+                <a href="#">Home</a> / <span>Events</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-wrapper">
+        
+        <div class="section-header-bar">
+            <div class="section-title">Upcoming Events</div>
+            <select class="view-all-select">
+                <option>View All Events</option>
+            </select>
+        </div>
+
+        <div class="events-grid">
+            
+            <div class="sample-event-card">
+                <div class="card-date-anchor">
+                    <div class="navy-date-box">
+                        <div class="day-num">20</div>
+                        <div class="month-lbl">May</div>
+                    </div>
+                    <div class="card-header-titles">
+                        <h3>Leadership Conference 2026</h3>
+                    </div>
+                </div>
+                <div class="card-meta-details">
+                    <div class="meta-detail-row">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>May 20 - 22, 2026</span>
+                    </div>
+                    <div class="meta-detail-row">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>9:00 AM - 4:00 PM</span>
+                    </div>
+                    <div class="meta-detail-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Main Auditorium</span>
+                    </div>
+                </div>
+                <button class="btn-card-register">Register Now</button>
+            </div>
+
+            <div class="sample-event-card">
+                <div class="card-date-anchor">
+                    <div class="navy-date-box">
+                        <div class="day-num">10</div>
+                        <div class="month-lbl">Jun</div>
+                    </div>
+                    <div class="card-header-titles">
+                        <h3>Prayer & Fasting Summit</h3>
+                    </div>
+                </div>
+                <div class="card-meta-details">
+                    <div class="meta-detail-row">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>June 10 - 14, 2026</span>
+                    </div>
+                    <div class="meta-detail-row">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>5:00 PM Daily</span>
+                    </div>
+                    <div class="meta-detail-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Prayer Chapel</span>
+                    </div>
+                </div>
+                <button class="btn-card-register">Register Now</button>
+            </div>
+
+            <div class="sample-event-card">
+                <div class="card-date-anchor">
+                    <div class="navy-date-box">
+                        <div class="day-num">05</div>
+                        <div class="month-lbl">Aug</div>
+                    </div>
+                    <div class="card-header-titles">
+                        <h3>Graduation Ceremony</h3>
+                    </div>
+                </div>
+                <div class="card-meta-details">
+                    <div class="meta-detail-row">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>Aug 5, 2026</span>
+                    </div>
+                    <div class="meta-detail-row">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>10:00 AM</span>
+                    </div>
+                    <div class="meta-detail-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Main Auditorium</span>
+                    </div>
+                </div>
+                <button class="btn-card-register">Register Now</button>
+            </div>
+
+        </div>
+
+        <div class="calendar-section-container">
+            <div class="calendar-dashboard-title">Calendar View</div>
+            
+            <div class="responsive-calendar-frame-shell">
+                <iframe src="https://calendar.google.com/calendar/embed?src=en.ng%23holiday%40group.v.calendar.google.com&ctz=Africa%2FLagos&wkst=1&bgcolor=%23ffffff&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0" style="border:medium none;" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navbar').classList.toggle('mobile-open');
+        }
+    </script>
+</body>
+</html>

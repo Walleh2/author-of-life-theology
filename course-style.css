@@ -1,0 +1,349 @@
+/* --- Global Variables Configuration --- */
+:root {
+    --navy-primary: #041e3d; /* Header/Brand Base Color */
+    --gold-accent: #c28e34; /* Interactive Accents Color */
+    --canvas-light: #fcfaf6; /* Balanced Off-White Page Background */
+    --surface-white: #ffffff;
+    --text-charcoal: #2c3e50;
+    --text-muted: #5e6a75;
+    --border-soft: #eaedf1;
+    
+    /* Semantic Flags */
+    --info-blue: #2980b9;
+    --success-green: #27ae60;
+    
+    --font-serif: 'Cinzel', serif;
+    --font-sans: 'Inter', sans-serif;
+    --transition: all 0.2s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--canvas-light);
+    color: var(--text-charcoal);
+    line-height: 1.5;
+}
+
+/* --- Header & Layout Navigation --- */
+.site-header {
+    background-color: var(--surface-white);
+    border-bottom: 1px solid var(--border-soft);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo-icon {
+    font-size: 26px;
+    color: var(--navy-primary);
+}
+
+.brand-titles h2 {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy-primary);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.brand-titles span {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    display: block;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item-link {
+    text-decoration: none;
+    color: var(--text-charcoal);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-item-link:hover, .nav-item-link.active {
+    color: var(--gold-accent);
+}
+
+.btn-cta-nav {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--gold-accent);
+    color: var(--surface-white);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-cta-nav:hover {
+    background-color: #a67628;
+}
+
+.menu-responsive-toggle {
+    display: none;
+    font-size: 22px;
+    color: var(--navy-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Breadcrumbs Navigation Banner --- */
+.breadcrumbs-banner {
+    background-color: #f5eff0;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.active-course-heading {
+    font-family: var(--font-serif);
+    font-size: 30px;
+    color: var(--navy-primary);
+    margin-bottom: 6px;
+}
+
+.navigation-breadcrumbs {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.navigation-breadcrumbs a {
+    color: var(--text-charcoal);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.navigation-breadcrumbs a:hover {
+    color: var(--gold-accent);
+}
+
+.navigation-breadcrumbs span {
+    margin: 0 6px;
+    color: #ccc;
+}
+
+/* --- Main Splits Framework Container --- */
+.workspace-layout-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.workspace-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- Classroom Left Screen Layout --- */
+.media-aspect-ratio-box {
+    position: relative;
+    padding-bottom: 56.25%; /* Clean 16:9 widescreen layout */
+    height: 0;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.media-aspect-ratio-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.lesson-meta-card {
+    margin: 24px 0;
+}
+
+.active-lesson-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy-primary);
+    margin-bottom: 8px;
+}
+
+.active-lesson-description {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Academic Materials Grid Row Tabs */
+.resource-tabs-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.tab-button-link {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-soft);
+    padding: 14px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-charcoal);
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+    transition: var(--transition);
+}
+
+.tab-button-link:hover {
+    border-color: #cbd3dc;
+    background-color: #fafbfc;
+    transform: translateY(-1px);
+}
+
+.text-blue { color: var(--info-blue); }
+.text-green { color: var(--success-green); }
+.text-muted { color: #95a5a6; }
+.text-gray { color: #7f8c8d; }
+
+/* --- Syllabus Right Navigation Column Panel --- */
+.syllabus-panel {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+}
+
+.syllabus-header-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy-primary);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.syllabus-list-index {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.index-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: var(--text-charcoal);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    gap: 12px;
+    transition: var(--transition);
+}
+
+.index-row:hover {
+    background-color: #f8fafd;
+    color: var(--info-blue);
+}
+
+.index-row.active {
+    background-color: #edf4fa;
+    color: var(--navy-primary);
+    font-weight: 600;
+}
+
+.index-icon {
+    color: var(--info-blue);
+    font-size: 14px;
+}
+
+.index-number {
+    color: #95a5a6;
+    font-weight: 400;
+}
+
+/* --- Responsive Media Adjustments --- */
+@media (max-width: 992px) {
+    .workspace-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-responsive-toggle {
+        display: block;
+    }
+
+    .main-navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--surface-white);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border-soft);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.04);
+    }
+
+    .main-navigation.responsive-active {
+        display: flex;
+    }
+
+    .btn-cta-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .active-course-heading {
+        font-size: 24px;
+    }
+
+    .resource-tabs-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

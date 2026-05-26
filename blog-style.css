@@ -1,0 +1,182 @@
+/* --- Brand Configuration Tokens --- */
+:root {
+    --navy-primary: #041e3d;
+    --navy-dark: #021326;
+    --gold-accent: #c28e34;
+    --gold-hover: #a67628;
+    --cream-bg: #fcfaf6;
+    --surface-white: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #64748b;
+    --border-color: #eaedf1;
+    --font-serif: 'Cinzel', serif;
+    --font-sans: 'Inter', sans-serif;
+    --shadow: 0 4px 20px rgba(4, 30, 61, 0.03);
+    --radius: 6px;
+    --transition: all 0.25s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--cream-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Shared Structural Layout Components --- */
+.site-header {
+    background-color: var(--surface-white);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo-icon {
+    font-size: 26px;
+    color: var(--navy-primary);
+}
+
+.brand-titles h2 {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy-primary);
+    letter-spacing: 0.5px;
+}
+
+.brand-titles span {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    display: block;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--gold-accent);
+}
+
+.btn-nav-cta {
+    background-color: var(--gold-accent);
+    color: var(--surface-white);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-nav-cta:hover {
+    background-color: var(--gold-hover);
+}
+
+.menu-toggle-btn {
+    display: none;
+    font-size: 22px;
+    color: var(--navy-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Breadcrumb Banner Modules --- */
+.page-banner {
+    background-color: #f5eff0;
+    padding: 35px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.banner-title {
+    font-family: var(--font-serif);
+    font-size: 30px;
+    color: var(--navy-primary);
+}
+
+.breadcrumb-trail {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.breadcrumb-trail a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+/* --- Flexible Responsive Content Display Grid --- */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.dynamic-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* --- Adaptive Breakpoint Controls --- */
+@media (max-width: 868px) {
+    .menu-toggle-btn {
+        display: block;
+    }
+    .main-navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--surface-white);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .main-navigation.mobile-open {
+        display: flex;
+    }
+}

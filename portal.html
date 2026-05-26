@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard Portal - Author of Life Institute of Theology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        
+        <button class="sidebar-toggle" id="sidebar-btn" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <aside class="sidebar" id="sidebar-menu">
+    <div class="sidebar-brand">
+        <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">
+            <h2>AUTHOR OF LIFE</h2>
+            <span>INSTITUTE OF THEOLOGY</span>
+        </div>
+    </div>
+
+    <div class="sidebar-shortcut">
+        <a href="index.html" class="back-home-link">
+            <i class="fa-solid fa-house"></i> Back to Website
+        </a>
+    </div>
+
+    <div class="student-profile-summary">
+        <div class="profile-avatar">
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+        <div class="profile-info">
+            <p class="welcome-tag">Welcome,</p>
+            <h3 class="student-name" id="student-name-field">John Daniel</h3>
+            <p class="student-id">ID: <span id="student-id-field">AOLIT/26/089</span></p>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a href="#" class="nav-item active"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-book"></i> My Courses</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-file-pen"></i> Assignments <span class="badge-count text-danger">3</span></a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-laptop-code"></i> Examinations <span class="badge-count text-warning">2</span></a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-chart-pie"></i> Results</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-envelope"></i> Messages</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-credit-card"></i> Payments</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user-gear"></i> Profile</a>
+        <div class="nav-divider"></div>
+        <a href="#" class="nav-item logout-link"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+</aside>
+            <nav class="navbar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="academics.html" class="nav-link">Academics</a>
+    <a href="admissions.html" class="nav-link">Admissions</a>
+    <a href="student-portal.html" class="nav-link active">Portal</a> 
+    <a href="sermons.html" class="nav-link">Sermons</a>
+    <a href="events.html" class="nav-link">Events</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="admissions.html" class="btn btn-primary btn-nav">Apply Now</a>
+</nav>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1 class="page-title">Dashboard</h1>
+                <p class="current-date" id="live-date">Academic Year Overview</p>
+            </header>
+
+            <section class="metrics-grid">
+                
+                <div class="metric-card">
+                    <div class="metric-body">
+                        <span class="metric-label">Enrolled Courses</span>
+                        <h2 class="metric-value" id="count-courses">5</h2>
+                    </div>
+                    <div class="metric-icon bg-blue"><i class="fa-solid fa-book-bookmark"></i></div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-body">
+                        <span class="metric-label">Assignments</span>
+                        <h2 class="metric-value" id="count-assignments">3 Pending</h2>
+                    </div>
+                    <div class="metric-icon bg-amber"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-body">
+                        <span class="metric-label">Examinations</span>
+                        <h2 class="metric-value" id="count-exams">2 Upcoming</h2>
+                    </div>
+                    <div class="metric-icon bg-green"><i class="fa-solid fa-file-invoice"></i></div>
+                </div>
+
+                <div class="metric-card metric-interactive">
+                    <div class="metric-body">
+                        <span class="metric-label">Term Results</span>
+                        <h2 class="metric-value text-link">View Grades</h2>
+                    </div>
+                    <div class="metric-icon bg-purple"><i class="fa-solid fa-square-poll-vertical"></i></div>
+                </div>
+
+            </section>
+
+            <div class="dashboard-details-layout">
+                
+                <section class="details-panel courses-panel">
+                    <h2 class="panel-title">My Courses</h2>
+                    <div class="courses-tracking-list">
+                        
+                        <div class="course-progress-item">
+                            <div class="course-meta">
+                                <span class="course-name">Introduction to Theology</span>
+                                <span class="progress-percent">75%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-progress-item">
+                            <div class="course-meta">
+                                <span class="course-name">New Testament Survey</span>
+                                <span class="progress-percent">60%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 60%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-progress-item">
+                            <div class="course-meta">
+                                <span class="course-name">Christian Ministry</span>
+                                <span class="progress-percent">40%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="course-progress-item">
+                            <div class="course-meta">
+                                <span class="course-name">Life of Christ</span>
+                                <span class="progress-percent">80%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="details-panel events-panel">
+                    <h2 class="panel-title">Upcoming Events</h2>
+                    <div class="events-list">
+                        
+                        <div class="event-item">
+                            <div class="event-icon-box text-blue"><i class="fa-regular fa-calendar-check"></i></div>
+                            <div class="event-details">
+                                <h4 class="event-name">Mid-Semester Exam</h4>
+                                <p class="event-date">May 26, 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="event-item">
+                            <div class="event-icon-box text-amber"><i class="fa-regular fa-id-badge"></i></div>
+                            <div class="event-details">
+                                <h4 class="event-name">Leadership Seminar</h4>
+                                <p class="event-date">May 29, 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="event-item">
+                            <div class="event-icon-box text-green"><i class="fa-solid fa-hands-praying"></i></div>
+                            <div class="event-details">
+                                <h4 class="event-name">Prayer Conference</h4>
+                                <p class="event-date">June 18, 2026</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#" class="btn btn-outline-block">View Full Academic Calendar</a>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        const sidebarBtn = document.getElementById('sidebar-btn');
+        const sidebarMenu = document.getElementById('sidebar-menu');
+
+        sidebarBtn.addEventListener('click', () => {
+            sidebarMenu.classList.toggle('mobile-open');
+        });
+    </script>
+</body>
+</html>

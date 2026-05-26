@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Author of Life Institute of Theology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="portal-style.css">
+</head>
+<body>
+
+    <div class="portal-container">
+        
+        <button class="mobile-toggle-btn" id="portal-menu-toggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <aside class="portal-sidebar" id="portal-sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-graphic"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="logo-titles">
+                    <h2>AUTHOR OF LIFE</h2>
+                    <span>INSTITUTE OF THEOLOGY</span>
+                </div>
+            </div>
+
+            <div class="home-navigation-wrapper">
+                <a href="index.html" class="link-to-main">
+                    <i class="fa-solid fa-house-chimney"></i> Return to Homepage
+                </a>
+            </div>
+
+            <div class="user-profile-badge">
+                <div class="user-avatar">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="user-credentials">
+                    <span class="greeting-prefix">Welcome,</span>
+                    <h3 class="student-display-name" id="portal-student-name">John Daniel</h3>
+                    <p class="student-display-id">ID: <span id="portal-student-id">AOLIT/26/089</span></p>
+                </div>
+            </div>
+
+            <nav class="sidebar-navigation-menu">
+                <a href="#" class="menu-link active"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+                <a href="#" class="menu-link"><i class="fa-solid fa-book-open"></i> My Courses</a>
+                <a href="#" class="menu-link"><i class="fa-solid fa-file-signature"></i> Assignments <span class="notification-bubble bubble-danger">3</span></a>
+                <a href="#" class="menu-link"><i class="fa-solid fa-pen-to-square"></i> Examinations <span class="notification-bubble bubble-warning">2</span></a>
+                <a href="#" class="menu-link"><i class="fa-solid fa-square-poll-vertical"></i> Results</a>
+                <a href="#" class="menu-link"><i class="fa-solid fa-envelope-open-text"></i> Messages</a>
+                <a href="#" class="menu-link"><i class="fa-solid fa-wallet"></i> Payments</a>
+                <a href="#" class="menu-link"><i class="fa-solid fa-user-gear"></i> Profile</a>
+                <div class="menu-separator"></div>
+              <a href="index.html" class="menu-link logout-button"><i class="fa-solid fa-power-off"></i> Logout</a>
+              </nav>
+        </aside>
+
+        <main class="portal-main-stage">
+            <header class="stage-header">
+                <h1 class="stage-title">Dashboard</h1>
+                <p class="stage-subtitle">Track your theological study progression</p>
+            </header>
+
+            <section class="overview-metrics-grid">
+                
+                <div class="card-metric">
+                    <div class="card-metric-info">
+                        <span class="card-metric-label">Enrolled Courses</span>
+                        <h2 class="card-metric-data" id="stat-courses">5</h2>
+                    </div>
+                    <div class="card-metric-icon tint-blue"><i class="fa-solid fa-scroll"></i></div>
+                </div>
+
+                <div class="card-metric">
+                    <div class="card-metric-info">
+                        <span class="card-metric-label">Assignments</span>
+                        <h2 class="card-metric-data" id="stat-assignments">3 Pending</h2>
+                    </div>
+                    <div class="card-metric-icon tint-amber"><i class="fa-solid fa-hourglass-half"></i></div>
+                </div>
+
+                <div class="card-metric">
+                    <div class="card-metric-info">
+                        <span class="card-metric-label">Examinations</span>
+                        <h2 class="card-metric-data" id="stat-exams">2 Upcoming</h2>
+                    </div>
+                    <div class="card-metric-icon tint-green"><i class="fa-solid fa-file-lines"></i></div>
+                </div>
+
+                <div class="card-metric action-metric-card">
+                    <div class="card-metric-info">
+                        <span class="card-metric-label">Results</span>
+                        <h2 class="card-metric-data interactive-link">View Grades</h2>
+                    </div>
+                    <div class="card-metric-icon tint-purple"><i class="fa-solid fa-graduation-cap"></i></div>
+                </div>
+
+            </section>
+
+            <div class="split-workspace-grid">
+                
+                <div class="progress-row">
+    <div class="progress-meta-labels">
+        <a href="course-view.html" style="text-decoration:none; color:inherit; font-weight:600;">
+            Introduction to Theology <i class="fa-solid fa-angle-right" style="font-size:11px; margin-left:4px;"></i>
+        </a>
+        <span class="label-course-percentage">75%</span>
+    </div>
+    <div class="progress-track-bg">
+        <div class="progress-track-fill" style="width: 75%;"></div>
+    </div>
+</div> 
+                        <div class="progress-row">
+                            <div class="progress-meta-labels">
+                                <span class="label-course-title">New Testament Survey</span>
+                                <span class="label-course-percentage">60%</span>
+                            </div>
+                            <div class="progress-track-bg">
+                                <div class="progress-track-fill" style="width: 60%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <div class="progress-meta-labels">
+                                <span class="label-course-title">Christian Ministry</span>
+                                <span class="label-course-percentage">40%</span>
+                            </div>
+                            <div class="progress-track-bg">
+                                <div class="progress-track-fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-row">
+                            <div class="progress-meta-labels">
+                                <span class="label-course-title">Life of Christ</span>
+                                <span class="label-course-percentage">80%</span>
+                            </div>
+                            <div class="progress-track-bg">
+                                <div class="progress-track-fill" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="workspace-panel">
+                    <h2 class="panel-heading">Upcoming Events</h2>
+                    <div class="timeline-events-stack">
+                        
+                        <div class="timeline-row-item">
+                            <div class="timeline-status-icon text-blue"><i class="fa-regular fa-calendar-check"></i></div>
+                            <div class="timeline-body">
+                                <h4 class="timeline-name">Mid-Semester Exam</h4>
+                                <p class="timeline-date">May 26, 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-row-item">
+                            <div class="timeline-status-icon text-amber"><i class="fa-solid fa-users-viewfinder"></i></div>
+                            <div class="timeline-body">
+                                <h4 class="timeline-name">Leadership Seminar</h4>
+                                <p class="timeline-date">May 29, 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-row-item">
+                            <div class="timeline-status-icon text-green"><i class="fa-solid fa-hands-praying"></i></div>
+                            <div class="timeline-body">
+                                <h4 class="timeline-name">Prayer Conference</h4>
+                                <p class="timeline-date">June 18, 2026</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#" class="btn-fullwidth-action">View Academic Calendar</a>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        const portalMenuToggle = document.getElementById('portal-menu-toggle');
+        const portalSidebar = document.getElementById('portal-sidebar');
+
+        portalMenuToggle.addEventListener('click', () => {
+            portalSidebar.classList.toggle('view-mobile-active');
+        });
+    </script>
+</body>
+</html> 

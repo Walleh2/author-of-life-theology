@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News - Author of Life Institute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .split-news-layout { display: flex; gap: 30px; }
+        .main-news-anchor { flex: 1.3; background: #fff; padding: 20px; border-radius: var(--radius); border: 1px solid var(--border-color); }
+        .news-sidebar-track { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+        .sidebar-story-card { background: #fff; padding: 15px; border-radius: var(--radius); border: 1px solid var(--border-color); display: flex; gap: 15px; align-items: center; text-decoration: none; color: inherit; transition: var(--transition); }
+        .sidebar-story-card:hover { border-color: var(--gold-accent); }
+        .sidebar-thumb { width: 90px; height: 70px; border-radius: 4px; object-fit: cover; background: #eaedf1; }
+        .loader-element { padding: 40px; text-align: center; color: var(--text-muted); font-size: 14px; width: 100%; }
+        @media (max-width: 992px) { .split-news-layout { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-identity">
+                <div class="brand-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="brand-titles"><h2>AUTHOR OF LIFE</h2><span>INSTITUTE OF THEOLOGY</span></div>
+            </div>
+            <nav class="main-navigation" id="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="academics.html" class="nav-link">Academics</a>
+                <a href="sermons.html" class="nav-link">Sermons</a>
+                <a href="library.html" class="nav-link">E-Library</a>
+                <a href="blog.html" class="nav-link active">Blog & News</a>
+                <a href="#" class="btn-nav-cta">Apply Now</a>
+            </nav>
+            <button class="menu-toggle-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-container">
+            <h1 class="banner-title">Blog & News</h1>
+            <div class="breadcrumb-trail"><a href="#">Home</a> / Blog & News</div>
+        </div>
+    </section>
+
+    <main class="content-wrapper">
+        <div class="split-news-layout" id="news-container">
+            <div class="loader-element"><i class="fa-solid fa-spinner fa-spin"></i> Fetching Live Updates from Google News...</div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() { document.getElementById('navbar').classList.toggle('mobile-open'); }
+
+        // Live Feed Interactivity Layer 
+        async function loadGoogleNews() {
+            const container = document.getElementById('news-container');
+            // Queries Google News RSS for open source theological/education keyword trends
+            const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=theology+education&hl=en-US&gl=US&ceid=US:en');
+            const apiTarget = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+
+            try {
+                const response = await fetch(apiTarget);
+                const data = await response.json();
+
+                if(data.status === 'ok' && data.items.length > 0) {
+                    let items = data.items;
+                    
+                    // Main Showcase Segment Element
+                    let mainItem = items[0];
+                    let sidebarHtml = '';
+
+                    // Secondary Feed List Elements
+                    for(let i = 1; i < Math.min(items.length, 4); i++) {
+                        let date = new Date(items[i].pubDate).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+                        sidebarHtml += `
+                            <a href="${items[i].link}" target="_blank" class="sidebar-story-card">
+                                <div style="flex:1;">
+                                    <h4 style="font-size:14px; line-height:1.3; margin-bottom:4px;">${items[i].title}</h4>
+                                    <span style="font-size:11px; color:var(--text-muted);">${date}</span>
+                                </div>
+                            </a>
+                        `;
+                    }
+
+                    let mainDate = new Date(mainItem.pubDate).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+                    container.innerHTML = `
+                        <div class="main-news-anchor">
+                            <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=800&q=80" style="width:100%; height:300px; object-fit:cover; border-radius:4px; margin-bottom:15px;" alt="News Cover Graphic">
+                            <span style="font-size:11px; color:var(--text-muted); display:block; margin-bottom:6px;"><i class="fa-regular fa-calendar"></i> ${mainDate}</span>
+                            <h3 style="font-family:var(--font-serif); margin-bottom:10px;"><a href="${mainItem.link}" target="_blank" style="color:inherit; text-decoration:none;">${mainItem.title}</a></h3>
+                            <p style="font-size:14px; color:var(--text-muted); margin-bottom:15px;">Discover global insights and ongoing discussions breaking out across modern academic research platforms.</p>
+                            <a href="${mainItem.link}" target="_blank" class="btn-nav-cta" style="display:inline-block;">Read Full Headline</a>
+                        </div>
+                        <div class="news-sidebar-track">
+                            ${sidebarHtml}
+                        </div>
+                    `;
+                } else {
+                    showFallback(container);
+                }
+            } catch (error) {
+                showFallback(container);
+            }
+        }
+
+        function showFallback(element) {
+            element.innerHTML = `
+                <div class="main-news-anchor">
+                    <h3>5 Keys to Spiritual Growth</h3>
+                    <p>Discover practical steps to grow stronger in your walk with God.</p>
+                </div>
+            `;
+        }
+
+        window.onload = loadGoogleNews;
+    </script>
+</body>
+</html> 
